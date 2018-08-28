@@ -72,8 +72,8 @@ For qualitative characteristics, such as design, segment, type of fuel, I have c
 
 So I got a distance measurement for each individual characteristic, and then I calculate the vector distance to get the distance with two car.
 
-In the end the cars were sorted by distance, in descending order, and shown only those with a distance less than a threshold.
-The threshold was defined arbitrarily after a series of tests.
+In the end the cars were sorted by distance, and shown only those with a distance less than a threshold.
+The threshold was defined arbitrarily after some tests.
 
 
 ## Test Unit
