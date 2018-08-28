@@ -42,14 +42,18 @@ The IdCar passed with the url is check in the controller, if it is null, control
 
 At first the action for sending the form was the same url of the detail page.
 The getDetail method checks for the presence of POST data and in positive case it calls the method saveRequest to insert them in the db.
+
 If Insert got successful, the form is not shown and a confirmation message is show in its place.
 In case of failure, the form is reloaded with the data sent.
 
 But then I prefer another solution with a piece of javascript and send data with a AJAX action.
 
 For the send, a new url was define "/saveform" with a new method in CarController.
+
 This retrieves the post data and invokes the same saveRequest method.
+
 The answer is a json format with a parameter that signals any possible errors.
+
 The script alerts the result with an alert function. It 's not a real good UX solution, but for this test it works
 
 I did not implement a very sophsticated controller on the values from the form, but I used to pass them with the PDO function bindParam to avoid some injection risck
@@ -60,10 +64,14 @@ I did not implement a very sophsticated controller on the values from the form, 
 The suggested cars are chosen according to the distance from the selected car.
 
 The idea is if we place place cars on a hypothetical XY chart, cars with similar characteristics will be in close positions.
+
 So I tried to define a metric to calculate the distance between the cars.
+
 For numerical characteristics, such as price, consume, weight, metric is a simple arithmetic subtraction.
 For qualitative characteristics, such as design, segment, type of fuel, I have chosen to assign the value 0 if the value are the same, 1 if it is different.
+
 So I got a distance measurement for each individual characteristic, and then I calculate the vector distance to get the distance with two car.
+
 In the end the cars were sorted by distance, in descending order, and shown only those with a distance less than a threshold.
 The threshold was defined arbitrarily after a series of tests.
 
