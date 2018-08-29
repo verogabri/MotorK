@@ -81,6 +81,7 @@ unfortunately PHPUnit is not my cup of tea, so I just defined the class to test 
 
 ## Plus: leads page
 
-I create another page [http://localhost:8888/leads] to get all leads present in table. It respondes with a json format.
+I create another page [http://localhost:8888/leads](http://localhost:8888/leads) to get all leads present in table.
+It respondes with a json format.
 
 
