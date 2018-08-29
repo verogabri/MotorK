@@ -79,6 +79,8 @@ The threshold was defined arbitrarily after some tests.
 ## Test Unit
 unfortunately PHPUnit is not my cup of tea, so I just defined the class to test the CarController
 
+## Plus: leads page
 
+I create another page [http://localhost:8888/leads] to get all leads present in table. It respondes with a json format.
 
 
